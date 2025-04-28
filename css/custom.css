@@ -1,0 +1,27 @@
+html, body {
+    cursor: default !important;
+}
+
+/* 覆盖特定元素的光标样式 */
+a, button, input[type="button"], input[type="submit"], input[type="reset"], 
+input[type="checkbox"], input[type="radio"], select, option,
+.nav-tabs > li > a, .pagination > li > a, .pagination > li > span,
+.btn, .label, .badge, .close, .carousel-indicators li {
+    cursor: pointer !important;
+}
+
+/* 禁用状态的光标 */
+button[disabled], input[disabled], select[disabled], textarea[disabled],
+.disabled, [disabled] {
+    cursor: not-allowed !important;
+}
+
+/* 帮助提示的光标 */
+[title], [data-original-title] {
+    cursor: help !important;
+}
+
+/* 图片放大光标 */
+img {
+    cursor: zoom-in !important;
+}
