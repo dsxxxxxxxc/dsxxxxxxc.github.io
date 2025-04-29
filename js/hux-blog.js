@@ -7,6 +7,8 @@
 // Tooltip Init
 $(function() {
     $("[data-toggle='tooltip']").tooltip();
+    // 修改导航按钮的提示文本
+    $('.pager a').attr('title', '我的博客');
 });
 
 
