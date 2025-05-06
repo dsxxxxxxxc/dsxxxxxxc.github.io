@@ -25,3 +25,20 @@ button[disabled], input[disabled], select[disabled], textarea[disabled],
 img {
     cursor: zoom-in !important;
 }
+
+/* 随机背景图片 */
+.intro-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* 确保背景图片覆盖整个区域 */
+.intro-header .page-heading,
+.intro-header .post-heading,
+.intro-header .site-heading {
+    padding: 100px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
