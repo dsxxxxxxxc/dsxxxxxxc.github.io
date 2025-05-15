@@ -42,3 +42,16 @@ img {
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* 自定义字体声明 */
+@font-face {
+    font-family: 'LxgwWenKai';
+    src: url('../fonts/LXGWWenKai-Medium') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 应用自定义字体 */
+body {
+    font-family: 'LxgwWenKai', -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
