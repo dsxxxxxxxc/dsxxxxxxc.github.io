@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://tlifecafe.xyz/cn/%E4%BD%95%E4%B8%BA%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%EF%BC%9F%E8%87%AA%E7%94%B1%E5%A5%B3%E6%9D%83%E4%B8%8E%E5%B7%AE%E5%BC%82%E5%A5%B3%E6%9D%83/</loc>
+    <loc>https://tlifecafe.xyz/cn/%E7%9F%A9%E9%98%B5%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</loc>
     
     <lastmod>2025-05-19</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://tlifecafe.xyz/cn/%E7%9F%A9%E9%98%B5%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</loc>
+    <loc>https://tlifecafe.xyz/cn/%E4%BD%95%E4%B8%BA%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89%EF%BC%9F%E8%87%AA%E7%94%B1%E5%A5%B3%E6%9D%83%E4%B8%8E%E5%B7%AE%E5%BC%82%E5%A5%B3%E6%9D%83/</loc>
     
     <lastmod>2025-05-19</lastmod>
     
@@ -100,69 +100,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://tlifecafe.xyz/books/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
-    
-    <lastmod>2024-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/books/MySQL%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95/</loc>
-    
-    <lastmod>2024-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/books/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</loc>
-    
-    <lastmod>2024-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/books/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
-    
-    <lastmod>2024-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/books/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    
-    <lastmod>2024-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/books/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</loc>
-    
-    <lastmod>2024-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/books/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA/</loc>
-    
-    <lastmod>2024-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://tlifecafe.xyz/</loc>
@@ -171,6 +108,20 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://tlifecafe.xyz/tags/%E7%BF%BB%E8%AF%91/</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tlifecafe.xyz/tags/%E5%93%B2%E5%AD%A6/</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://tlifecafe.xyz/tags/%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA/</loc>
@@ -188,20 +139,6 @@
   
   <url>
     <loc>https://tlifecafe.xyz/tags/%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89/</loc>
-    <lastmod>2025-05-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/tags/%E7%BF%BB%E8%AF%91/</loc>
-    <lastmod>2025-05-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/tags/%E5%93%B2%E5%AD%A6/</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -274,13 +211,6 @@
   
   <url>
     <loc>https://tlifecafe.xyz/categories/%E9%9A%8F%E7%AC%94/hreep/</loc>
-    <lastmod>2025-05-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tlifecafe.xyz/categories/books/</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
