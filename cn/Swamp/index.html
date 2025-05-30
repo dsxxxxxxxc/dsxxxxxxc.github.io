@@ -261,6 +261,8 @@
 
           
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -278,8 +280,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -498,7 +498,7 @@
 <p>拿到了53（dns）,22(ssh),80(http)三个端口，访问一下发现会被解析成域名，写入hosts</p>
 <p><img src="%E5%9B%BE%E7%89%87%202.png" alt="图片.png"></p>
 <p><img src="%E5%9B%BE%E7%89%87%203.png" alt="图片.png"></p>
-<p><del>直接访问发现没用(原来是开了tun模式)</del></p>
+<p><s>直接访问发现没用(原来是开了tun模式)</s></p>
 <p>直接访问发现一张图片</p>
 <p><img src="%E5%9B%BE%E7%89%87%204.png" alt="图片.png"></p>
 <p>没啥线索，查看一下DNS拿一下其他域名</p>
@@ -1249,23 +1249,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-</body>
+	</body>
 </html>
