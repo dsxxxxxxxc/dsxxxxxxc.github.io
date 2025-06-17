@@ -482,19 +482,6 @@
         <ul>
           
           <li>
-            06-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Lost/Lost/" style="color: #0085a1">
-              <span>
-                Untitled
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
             06-10
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="/cn/Lost/" style="color: #0085a1">
@@ -1190,5 +1177,23 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
